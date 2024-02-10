@@ -101,7 +101,26 @@ This project involves the creation of a Minecraft server on a Raspberry Pi 4 usi
   - Run the "sudo java -jar nukkit.jar" command 
   ![MCPhoto15](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/c8608724-0060-477b-9e9e-7bca94a833c8)
   ![MCphoto17](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/89edd283-a484-42d7-8d1b-83a459968067)
-  - The Minecraft server is up and running on the specified IP address 
+  - The Minecraft server is up and running on the specified IP address
+  - Before connecting to the Minecraft server, make sure that port 19132 is allowed if you have a firewall
+    - In my case, I have UFW (Uncomplicated Firewall) installed on my Pi and needed to allow port 19132 to connect to the Minecraft server
+   
+      
+    ![MCPhoto18](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/0b537aa8-aeff-4712-8cd5-48581a2c231c)
+
+
+
+- Step 10
+  - Load up Minecraft Bedrock edition and navigate to the add "Add External Server" section of the game 
+  - Enter the appropriate details such as the server name, address, and port number
+  - Click "Play"
+    ![MCPhoto19](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/9fbb7f93-bad5-4957-9420-bb925cb2c380)
+    ![MCPhoto20](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/dcf53a3e-54d6-4440-9672-c0c1d72d0847)
+    - The Minecraft world has been loaded, and we are playing in our newly created Minecraft server
+    - Stop the server anytime by entering stop into the Linux command line 
+    ![MCPhoto22](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/323075ec-6ad3-434f-8a48-31332ad70c76)
+    ![MCPhoto21](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/ec83ef06-212f-4dae-b0ea-cdc49142c16d)
+
 
 
 
