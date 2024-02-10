@@ -1,44 +1,53 @@
 
 
-![image](https://github.com/chriskhawaja/azure-network-protocols/assets/153021794/1d10087c-82b1-437a-a347-e8eefba67d70)
+![image](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/aca1f23a-907f-41f5-82c4-710fe3daceb2)
 
 
 
 
-<h1>Analyzing Network Traffic and Implementing Network Security Groups</h1>
+
+<h1>Building and Hosting a Minecraft Server on a Raspberry Pi</h1>
 
 <h2>Project Summary</h2>
-This project involves the creation of two virtual machines and the utilization of Wireshark to examine various network traffic. Additionally, Network Security Groups will be accessed via Azure to allow or block ICMP traffic. Completion of this project aims to give the user a better understanding of ports, network protocols, remote desktop protocol, command line use, and a basic proficiency of a network analyzer tool, such as Wireshark.
+This project involves the creation of a Minecraft server on a Raspberry Pi 4 using the Linux command line. Specifically, to download the Minecraft server on our Pi, we will be using the Nukkit software from CloudBurst. Minecraft servers can be used to allow friends to collaborate within the same Minecraft world. Additionally, building a server can allow individuals to customize their own world, as well as adjust settings within the server and fix any problems that may arise. This project can give an introductory view into running and maintaining a server, which is an essential skill for individuals pursuing Information Technology careers. 
 <h2>Platforms and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machine Deployment)
-- Azure Resource Group (Contains VM's)
-- Command Prompt (Communication with the Operating System)
-- Wireshark (Network Traffic Analyzer Tool)
-- SSH (Accessing Linux Terminal)
-  - TCP Port 22
-- DNS (Conversion of strings and letters into IP addresses)
-  - TCP and UDP Port 53
-- DHCP (IP Address Allocation)
-  - TCP Ports 67 and 68
-- RDP (Remotely Accessing Virtual Machines)
-  - TCP Port 3389
+- Raspberry Pi 3 or 4 (Earlier versions can be used but will lack in performance)
+- Ethernet cable (Wi-Fi will be slower than a wired connection)
+- 16 GB+ microSD card
+- USB or wireless keyboard or mouse 
+- Computer monitor 
+- HDMI cable 
+- Copy of Minecraft Bedrock Edition (will not work on Java)
+
 
 <h2>Operating Systems Used </h2>
 
-- Windows 10 Pro
-- Linux (Ubuntu Server 20.04)
+- Raspbian OS
 
 <h2>Project Installation Steps</h2>
 
 - Step 1
-  - Create a Resource Group within Microsoft Azure
-![image](https://github.com/chriskhawaja/azure-network-protocols/assets/153021794/36006b36-ffd9-41f5-9f41-7f04ae2ce17e)
+  - Find out the IP address of our Raspberry Pi
+  - Enter the "sudo hostname -I" command into the bash terminal
+    - Additonally, you can enter in the "ifconfig | grep inet" command to find the device IP address as well
+  - If the account you are using does not have "sudo" permissions, switch to the root account via the "su root" command
+    - Then, enter the root password
+    - Once you are in the root account, use the "sudo usermod -aG sudo (username)" command to grant sudo permissions - place the user's name in the username sections of the command
+    - Exit the root account with the "exit" command
+![Minecraft1](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/99bc462b-356a-4d4c-8f5c-1c8f46476f02)
+![MCPhoto2](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/85fec711-29ca-4bff-ad0c-ca1097432614)
+![MCPhoto3](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/9e126593-9cd9-4a1c-98a1-d09790a5e6db)
+![MCPhoto4](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/ba852fd5-37d1-4e2d-b5be-5e97aac47ba8)
 
-- Step 2  - within the Resource Group that was created
-  - Create an Azure Virtual Machine running a Windows 10 Pro Image
-  - Make sure to place this Virtual Machine into the resource group that was created
-  - Ensure that 2 Virtual CPU's are selected for each Virtual Machine
+
+- Step 2  - Before installing any software, make sure to update your Pi with the "sudo apt update && sudo apt upgrade" command via the bash terminal
+  ![Photo2](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/9a843670-1f5a-4222-a337-7d168963f6a0)
+  - Now, we need to install Java in order for the Nukkit server software to deploy 
+    - Enter in the "sudo apt install default-jdk" command
+    - When prompted to download, make sure to type "Y" and press enter 
+    - ![MCPhoto5](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/dce5de74-1e9d-4f78-b5bf-f72e9d933501)
+
   ![image](https://github.com/chriskhawaja/azure-network-protocols/assets/153021794/baef5b4a-f3ed-40d2-90d6-fcd570da6d1c)
 
 - Step 3
