@@ -25,6 +25,15 @@ This project involves the creation of a Minecraft server on a Raspberry Pi 4 usi
 
 - Raspbian OS
 
+
+<h2>Sources and Credit </h2>
+
+
+- https://www.youtube.com/watch?v=u2DnafpNQW8&t=384s (Zak Jaeb)
+
+
+- https://www.makeuseof.com/tag/setup-minecraft-server-raspberry-pi/ (Christian Cawley)
+
 <h2>Project Installation Steps</h2>
 
 - Step 1
@@ -121,6 +130,8 @@ This project involves the creation of a Minecraft server on a Raspberry Pi 4 usi
     ![MCPhoto22](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/323075ec-6ad3-434f-8a48-31332ad70c76)
     ![MCPhoto21](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/ec83ef06-212f-4dae-b0ea-cdc49142c16d)
 
-
+IMPORTANT - It is essential to secure any server you have working on your system
+I recommend downloading a firewall onto your Pi such as UFW (Uncomplicated Firewall) and an Anti-Malware program such as Clam AV
+I hold no responsibility for any print server that is unsecure, make sure to secure your server!
       
 **** Picture used at the top of personal project is not mine (taken from Google)
