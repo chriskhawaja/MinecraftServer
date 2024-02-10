@@ -48,41 +48,62 @@ This project involves the creation of a Minecraft server on a Raspberry Pi 4 usi
     - When prompted to download, make sure to type "Y" and press enter 
     - ![MCPhoto5](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/dce5de74-1e9d-4f78-b5bf-f72e9d933501)
 
-  ![image](https://github.com/chriskhawaja/azure-network-protocols/assets/153021794/baef5b4a-f3ed-40d2-90d6-fcd570da6d1c)
 
 - Step 3
-  - Repeat the same process and create a Virtual Machine with an Ubuntu Server Image
-  - Make sure that both Virtual Machines are on the same Virtual Network   
-![image](https://github.com/chriskhawaja/azure-network-protocols/assets/153021794/c12876b3-2705-4d20-a23a-297d160110e4)
-
+  - We will now need to create a directory for our Minecraft server
+  - Enter in the "sudo mkdir minecraftserver" command and press enter 
+![MCPhoto7](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/64c745e1-3fe5-474e-a18e-04f434f87003)
+  - Now that we have made our directory for the Minecraft server, we have to go into that directory
+  - In order to change directories, we will use the "cd minecraftserver" command to go into the directory 
+  ![MCPhoto8](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/1b467b68-142b-4504-8f89-4c9946748de3)
+  - As you can see within the terminal, we are in our Minecraft server directory 
 
 
 - Step 4
-  - Utilizing RDP on Windows, remote into Virtual Machine 1 (Windows Pro) - by typing in the IP Address
-  - If using a Mac computer, go to the app store and download the Microsoft Remote Desktop application
-  - You will be prompted with a login screen - use the credentials you provided during the virtual machine creation process
-![image](https://github.com/chriskhawaja/azure-network-protocols/assets/153021794/6d103328-f103-429d-aef5-f47c17e1aa1b)
+  - We will now need to download the software for our Nukkit server and can do this in our terminal
+  - Go ahead and copy and paste this long command and make sure to use "sudo" before entering this command:wget -O nukkit.jar https://ci.opencollab.dev/job/NukkitX/job/Nukkit/job/master/lastSuccessfulBuild/artifact/target/nukkit-1.0-SNAPSHOT.jar
+ ![MCPhoto9](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/6a8406f9-02f8-4e78-bca9-ec8b9a348f42)
+
+
 
 
 - Step 5
-  - Once you are booted into the Virtual Machine, proceed to download Wireshark
-  - Type in "Download Wireshark" on a Google Search
-    ![image](https://github.com/chriskhawaja/azure-network-protocols/assets/153021794/0fb98c1c-7feb-4465-8ba6-9e4914726d40)
+  - Since we have downloaded the Nukkit server software, it is time to deploy the server
+  - In order to deploy the server, enter in the "sudo java -jar nukkit.jar" command and choose your desired language
+![MCPhoto10](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/f6306b26-9ff6-4a37-b42b-7b8408b96fb2)
+
 
 - Step 6
-  - Once you are finished downloading Wireshark, boot up Wireshark by searching for the program towards the bottom left corner of the screen
-  
-   ![image](https://github.com/chriskhawaja/azure-network-protocols/assets/153021794/4929ebc0-2736-48f7-bec3-81b7cb40ae7a)
+  - Our server is now being configured with the appropriate settings
+  - Take note of the port that our server is running on
+  - Do not worry about the 0.0.0.0 for the IP address we can change this or keep it as is
+  ![MCPhoto11](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/4b8c7f2b-5d31-459a-8e45-306f773efbe1)
+
 
 - Step 7
-  - Once you are in Wireshark, be sure to select Ethernet
-  ![image](https://github.com/chriskhawaja/azure-network-protocols/assets/153021794/f4463c38-3339-439e-9e2c-1ce43ee360a5)
+  - For us to configure settings within our own server, we need to stop the server
+  - This can be accomplished by entering "stop" while our server is running 
+ ![MCPhoto12](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/8f4e8af7-7dfd-495c-821e-279f8d819797)
+
 
 - Step 8
-  - You will begin to see multiple streams of network traffic be displayed
-  - Above the network traffic, where it says "Apply a Display Filter" in the white box, type in whatever traffic you would like to be displayed
-  - Have fun analyzing network traffic!
-  - ![image](https://github.com/chriskhawaja/azure-network-protocols/assets/153021794/bd4a5ea6-9da4-4706-8a86-364312b0e281)
+  - We need to open our server properties file to configure settings
+  - Enter the "sudo nano server.properties" command - nano is a text editor used in Linux
+   ![MCPhoto13](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/db9505ca-1414-447c-8613-b474b2cbc467)
+   ![MCPhoto16](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/81cc33ce-f151-4297-8954-d5e7e4118fad)
+  - As you can see, I have changed the IP address to match my Raspberry Pi device, and keep the port number the same
+  - Take note of the many different settings that can be configured within this server
+  - To save changes and leave the nano text editor, press "Ctrl-X, Y, and enter"
+ 
+
+- Step 9
+  - We are now back to our bash terminal and need to start our Minecraft server again
+  - Run the "sudo java -jar nukkit.jar" command 
+  ![MCPhoto15](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/c8608724-0060-477b-9e9e-7bca94a833c8)
+  ![MCphoto17](https://github.com/chriskhawaja/MinecraftServer/assets/153021794/89edd283-a484-42d7-8d1b-83a459968067)
+  - The Minecraft server is up and running on the specified IP address 
+
+
 
 <h2>Project Demonstration</h2>
 
